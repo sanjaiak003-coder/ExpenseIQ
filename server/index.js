@@ -32,6 +32,9 @@ app.get('/api/health', (req, res) => {
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/expense-tracker';
 
+app.get('/', (req, res) => {
+  res.send('ExpenseIQ Backend is running!');
+});
 // Start server immediately so API is never blocked
 app.listen(PORT, () => {
   console.log(`🚀 ExpenseIQ Server running on http://localhost:${PORT}`);
